@@ -9,8 +9,8 @@ module.exports = {
     vendor: ['react', 'react-dom']
   },
   output: {
-    path: path.resolve(__dirname, 'build/public_html/js'),
-    filename: '[name].[chunkhash].js'
+    path: path.resolve(__dirname, 'build/public_html'),
+    filename: 'js/[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -35,8 +35,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: '../index.html'
+      template: './public/index.html'
     }),
     new CleanWebpackPlugin()
   ]
