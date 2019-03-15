@@ -1,0 +1,1615 @@
+
+/* ============================================ *
+* Codazon_Ellyana Header
+* ============================================ */
+.header {
+	.cdz-bottom-logo-cart{
+		padding: 40px 10px 40px;
+	}
+	/*Header top*/
+	.cdz-header-top{
+		padding-bottom: 7px;
+    	padding-top: 7px;
+    	.cdz-top-link{
+    		display: flex;
+    		align-items: flex-end;
+			.link{
+				a{
+					color: $header_top_text;
+					&:hover{
+						color:$header_hover_text;
+					}
+				}
+				&.signup{					
+					a{
+						display:flex;
+						&:before{
+							@include abs-iconfont2('\e605', 16px);
+						}
+					}
+				}
+			}
+		}
+		#cdz-pc-stores{
+			&.cdz-col-left{					
+				.cdz-trigger{
+					text-decoration:none;
+					&:hover{
+						color: $header_hover_text;
+					}
+				}					
+			}
+		}
+	}
+	/*Header Cart*/
+	.cart-label {
+	    display: inline-block;
+	    font-size: 14px;
+	    color:$header_text_cart
+	}
+	.cdz-header-cart{
+		height: 40px;
+	}
+	.cart-icon{
+		color:$header_text_cart;
+		&:before{
+			margin-right:10px;
+			.cdz-rtl &{
+				margin-right:0;
+				margin-left:10px;
+			}
+		}
+	}
+	.cart-subtotal{
+		position:absolute;
+		bottom:0;
+		left:55px;
+		.price{
+			padding:0;
+			min-height:unset;
+			font-size:12px;
+			font-weight:300;
+			color:$header_text_cart
+		}
+		.cdz-rtl &{
+			left:auto;
+			right:55px;
+		}
+	}
+	/*Header Search*/
+	.search-wrapper{
+		.input-text{
+			font-style: italic;
+			&::-webkit-input-placeholder {color: $header_search_text}
+			&:-moz-placeholder {color: $header_search_text}
+			&::-moz-placeholder {color: $header_search_text}
+			&:-ms-input-placeholder {color: $header_search_text}
+			&:focus{
+				outline: 0;
+			}
+		}
+		.block-search .button:before{
+			@include abs-iconfont2("\e618", 25px);
+		}
+	}
+	.sticky-menu.active .search-wrapper .block-search{
+		right:75px;
+		&:after{
+			width:2px;
+			height:20px;
+			border-right:1px dotted $menu_text;
+			content:"";
+			right: -7px;
+			top: 25%;
+			position: absolute;
+		}
+	}
+}
+/* ============================================ *
+* Codazon_Ellyana Main Title
+* ============================================ */
+.widget-static-block{
+	.cdz-block-title {
+		.b-title{
+			border-bottom: 0;
+		    font: $f_h1;
+		    font-size: 3.6rem;
+		    font-weight: 200;
+		    padding: 0 0 6px;
+		    margin-bottom: 0;
+		    &:before{display:none}
+		}
+		.title-desc {
+		    text-transform: uppercase;
+		    color: #cccccc;
+		    font-weight: 300;
+		    font-size: 1.4rem;
+		    margin-top: -5px !important;
+		    span{
+		    	position:relative;
+		    	&:before,
+		    	&:after{
+		    		position: absolute;
+				    content: "";
+				    width: 40px;
+				    border-bottom: 1px solid $main_block_title_border;
+				    right: -50px;
+				    bottom: 50%;
+		    	}
+		    	&:before{
+		    		left: -50px;
+    				right: auto;
+		    	}
+		    }
+		}
+		&.special-title {
+			font-family: Playfair Display;	
+			.b-title{
+				text-transform: unset !important;
+				font-size:24px;
+				font-family: Playfair Display;	
+			}
+			.title-desc {
+				font-size:16px;
+				text-transform:unset;
+				font-style:italic;
+				color:$main_title_text;
+				span{
+					&:before,
+					&:after{
+						display:none
+					}
+				}
+			}		    
+		}
+	}
+}
+
+/* ============================================ *
+* Codazon_Ellyana New Released
+* ============================================ */
+.cdz-new-trend-wrap{
+	.product-items.flex-grid {
+	    display: flex;
+	    flex-flow: wrap;
+	}
+	.cdz-product-top {
+		position:static;
+		.product-gallery{
+			width: 60px;
+		    position: absolute;
+		    left: -50px;
+		    top: -1px;
+		    min-width: 43px;
+		    padding: 30px 5px 150px;
+		    border-right: 0;
+		    z-index: 11;	    
+		    border: 1px solid transparent;
+		    background:$main_product_background;	   
+		    visibility: hidden;
+		    height: calc(100% + 2px);
+		    @include abs-transition();
+		    @include opacity-extention(0);
+		    .img-slider{
+		    	.item {
+		    		width: 100% !important;
+	    			max-width: none !important;
+	    			margin:0;
+	    			padding:0;
+		    	}
+		    }
+		    .lSSlideOuter{overflow:visible}
+		    .lSAction {
+		    	> a {
+				    text-align: center;
+				    background: #ffffff;
+				    top: -30px;
+				    left: 40%;
+				    height: 25px;
+				    width: 35px;
+				    display: block;
+				    cursor: pointer;
+				    position: absolute;
+				    z-index: 99;
+				    @include opacity-extention(1);
+				    &:before{
+						@include abs-iconfont("\F106", 30px);
+					}
+					&.lSNext{
+						bottom: -25px;
+						top: auto;
+						&:before{
+							content:"\F107"
+						}
+					}
+				}
+			}
+		}
+	}
+	.products-grid{
+		.product-item-info{
+			.product-item-details{
+				.product-item-description{
+		 			font-weight:400
+		 		}
+			}
+			.cdz-product-top,
+			.cdz-hover-section{
+				position:static;
+			}
+		}
+	}
+	.product-item-info{
+		background:$main_product_background;
+		position: relative;
+		border:1px solid transparent;
+		.cdz-hover-section{
+			.product-image{
+				&:hover {
+					img{
+						opacity: 1 !important;
+						-webkit-backface-visibility: inherit;
+    					backface-visibility: inherit;
+					}
+				}
+			}			
+		}
+		 .product-item-details{
+		 	padding:20px;		
+		 	background: $main_product_background;
+		 	@include abs-transition();
+		 	.price-box{
+		 		margin:5px 0 5px;
+		 		display: flex;
+    			justify-content: center;
+    			.old-price{
+    				color:$main_hover_text;
+    				margin-left:0;
+    				.price{
+    					color:$main_hover_text;
+    				}
+    			}
+		 	}
+		 	.price{
+		 		font-weight:500
+		 	}
+		 }
+		.product-quickview{
+			.qs-button{
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    padding: 0;
+			    font-weight: 600;
+			    font-size: 1.2rem;
+			    background: rgba(255, 255, 255, 0.62);			    
+			    border: 0;
+				color: $btn_productitem_text;
+				@include abs-transition();
+				@include opacity-extention(0);
+				&:before{
+					margin:0 5px;
+					font-size:12px;
+				}
+			}
+		}
+		.product-name {
+		    font-size: 1.2rem;
+		    text-transform: uppercase;
+		    font-weight: 400;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		}
+		.cdz-buttons-container{
+			.action.link-compare{display:none}
+		}
+		.btn-cart{
+			font-size: 1.2rem;
+		    vertical-align: top;
+		    width: calc(100% - 40px );
+		    border-width:1px;
+		    margin-bottom: 0;
+		    @include abs-transition();
+		    @include abs-style($btn_default_text, $btn_default_border, $btn_default_background);
+		    &:hover{
+		    	@include abs-style($btn_default_background, $btn_default_border, $btn_default_text);
+		    }
+		    &:before{
+		    	display:none;
+		    }
+		}
+		.cdz-buttons-container{
+			height: auto;
+		    width: 100%;
+		    bottom: 20px;
+		    margin-bottom:0;
+		    background: transparent;
+		    top: auto;
+		    position: absolute;
+		    @include opacity-extention(0);
+		}
+		&:hover{
+			border-color: $main_border;
+			.product-quickview{
+				.qs-button{
+					@include opacity-extention(1);
+					@include abs-transform(translateY(-35px));
+					z-index:1;
+				}
+			}
+			.product-item-details{
+				@include abs-transform(translateY(-50px));
+			}
+			.cdz-buttons-container{
+				@include opacity-extention(1);
+			}
+			.product-gallery{
+				@include opacity-extention(1);
+				visibility: visible;
+    			border-color: #dddddd;
+    			border-right-color: transparent;
+			}
+		}
+	}
+	.products-grid .product-items:not(.owl-carousel){
+		background: $main_background
+	}
+}
+.vImgLoader {
+	span{
+		font-size:0;
+		&:before{
+			@include abs-iconfont("\f252", 18px);
+			color:$main_hover_text;
+			font-weight:700;
+			-webkit-animation: rotation 2s infinite;
+			animation: rotation 2s infinite;
+		}
+	}
+}
+.ajax-load-wrapper .ajax-load-button .ajax-loader, 
+.ajax-load-wrapper .ajax-load-button a{
+	border-width:2px;
+	&:hover{
+		border-width:2px;
+	}
+}
+
+/* ============================================ *
+			 Codazon_Ellyana 3 Banner
+* ============================================ */
+.wrapper-ads05{
+	background-color:transparent;
+	padding:0;
+	&.banners-wrapper{
+		.banner-zoom{
+			overflow: hidden;
+    		display: block;
+		}
+		.groupinfo{
+			padding: 22px 20px;
+			background:#ffffff;
+			a{
+				color: $main_title_text;
+			    text-decoration: none;
+			    font-size: 11px;
+			}
+			.grifo-title{
+				margin-bottom:5px
+			}
+			.grifo-desc{
+				color: #cccccc;
+			    font-size: 14px;
+			    font-weight: 300;
+			    margin-bottom:0;
+			}
+		}
+	}
+}
+/* ============================================ *
+* Codazon_Ellyana Best Seller
+* ============================================ */
+@media screen and (min-width:768px){
+.cdz-best-seller-wrap{
+	.nav-tabs{
+		margin-bottom:20px;
+		.item{
+			margin-right:8px;
+			a.data.switch{
+				padding:1px 10px;
+				border-width:2px;
+				border-style:solid;
+				border-color:$main_tab_border;
+				@include abs-borderradius(0);
+				font-weight:400;
+				font-size:11px;
+				text-transform:uppercase;
+			}
+			&.active{
+				a.data.switch{
+					border-color: $main_tab_hover_text;
+					background:transparent;
+				}
+			}
+			&:hover{
+				a.data.switch{
+					border-color: $main_tab_hover_text;
+				}
+			}
+		}
+	}	
+	.product-items{
+		.item{
+			.product-item-info{
+				.product-item-link{
+					text-transform:capitalize !important;
+					color:#ffffff;
+					&:hover{color: $main_hover_text !important	}
+				}
+				&:hover {
+					.cdz-product-wishlist {
+						a.action.towishlist{color:#ffffff}
+					}
+					.product-item-link{
+						color:#ffffff;
+						text-transform: capitalize;
+					}
+					.price{color:#ffffff;}
+					.price-box{
+						.old-price{
+								color:#777777;
+							.price{	color:#777777;}
+						}
+					}
+					.cdz-buttons{
+						.btn-cart,
+						.qs-button,
+						.tocompare
+						{
+							border-width:2px;
+							@include abs-style( #ffffff,#ffffff,transparent);
+							&:hover{
+								@include abs-style($btn_default_text,$btn_default_border,$btn_default_background)
+							}
+						}
+						.qs-button{
+							margin-right:2px
+						}
+					}
+				}
+			}
+		}
+	}
+}
+}
+/* ============================================ *
+* Codazon_Ellyana Categories
+* ============================================ */
+.wrapper-ads06{
+	padding:20px 0;
+	.banner {
+		margin-bottom:5px;
+		a {
+			display: inline-block;
+			vertical-align: top;
+			@include abs-transition();			
+		}
+		img{
+			@include abs-transition();
+		}
+	}
+	.items{
+		li{
+			border-right:1px solid $main_border;
+			padding:30px 10px;
+			&:last-child{
+				border-right:0
+			}
+			&:hover{
+				.title{
+					color: $main_hover_text
+				}
+				.banner{
+					img{
+						@include abs-transform(translateY(-15px))
+					}
+				}
+			}
+		}
+	}
+}
+.rating-box .rating{top:-1px}
+/* ============================================ *
+	Codazon_Ellyana Most Popular & Our Pick
+* ============================================ */
+.col-main .widget .product-style-09 .product-items .item {
+	width:100%;text-align:left;
+	.cdz-rtl &{
+		text-align:right
+	}
+}
+.product-style-09{
+	.cdz-block-title{
+		text-align:left;
+		margin-bottom:13px;
+		.b-title{
+			font-size:24px
+		}
+	}
+	.product-items{
+		.item{
+			background:$main_product_background; 
+			padding:25px 15px;
+			margin: 0;
+			display: flex;						
+			&:hover{
+				.cdz-product-top{
+					img{
+						@include abs-opacity(0);
+						&.alternative-img{
+							opacity:1 !important
+						}
+					}
+				}
+				.qs-button{
+					@include abs-opacity(1);
+				}
+			}			
+		}
+	}
+	.product-item-info{padding:0;width: 35%;}
+	.cdz-product-top{
+		position:relative;
+		.product-image{
+			overflow: visible;
+    		border: 0;
+		}
+		img{
+			@include abs-transition();
+			&.alternative-img{
+				position:absolute;
+				top:0%;				
+				&.alternative-img{
+					@include abs-opacity(0);
+				}
+			}
+		}		
+	}
+	.qs-button{
+		position: absolute;
+	    top: calc((100% - 33px)/2);
+    	left: calc((100% - 33px)/2);
+	    border-width:1px;
+	    width:33px;
+	    height:33px;
+	    @include abs-opacity(0);
+	    @include abs-borderradius(100%);
+	    @include abs-style($btn_default_text, $btn_default_border, $btn_default_background);
+	    &:before{
+	    	line-height:28px;
+	    }
+	}
+	.product-info{
+		padding-bottom:0;
+		width: 65%;
+		.product-name{
+			margin-top: 18px;
+			font-size: 1.2rem;
+		    text-transform: uppercase;
+		    font-weight: 400;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		}
+		.product-item-description{
+			font-size:12px;
+			color:#a1a1a1;
+			margin-bottom: 15px;
+		}
+		.old-price{margin-left:0}
+		.cdz-buttons{
+			a{
+				font-size:12px;
+				text-decoration: underline;
+				position:relative;
+				padding-right:17px;
+				color:$main_title_text;
+				&:hover{
+					color:$main_hover_text
+				}
+				&:before{
+					content:"|";
+					margin:0 10px;
+					position:absolute;
+					top: 2px;
+					right: -3px;
+					line-height: 1;
+				}
+				&:last-child{
+					&:before{content:""}
+				}
+			}
+		}
+		.btn-cart{
+			padding: 0;
+		    border: 0;
+		    text-transform: unset;
+		    font-size: 12px;
+		    font-weight: normal;
+		    text-decoration: underline;
+		    background:transparent;
+		    &:hover{
+		    	color:$main_hover_text
+		    }
+		}
+	}
+}
+/* ============================================ *
+	Codazon_Ellyana Blog
+* ============================================ */
+.cdz-wapper-blog-01{
+	margin-top:30px;
+	.cdz-blog-top {
+	    position: relative;
+	    overflow: hidden;
+	    .blog-date{
+	    	left: auto;
+		    right: 10px;
+		    text-transform: uppercase;
+		    color: #333333;
+		    font-size: 1rem;
+		    position: absolute;
+    		bottom: 10px;
+    		background: #fff;
+    		padding: 7px 20px;
+	    }
+	    img{
+	    	@include abs-transition();
+	    }
+	    &:hover{
+	    	img{
+	    		@include abs-scale(1.05);
+	    	}
+	    }
+	}
+	.cdz-post{
+		background:#ffffff
+	}
+	.cdz-blog-bottom{
+		padding:15px 30px;
+	}
+	.blog-title{
+		a{
+			font: 400 18px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif;
+			color:$main_title_text;
+			text-transform: capitalize;
+			&:hover{
+				color:$main_hover_text
+			}
+		}		
+	}
+	.blog-category{
+		font: 400 14px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif;		
+		font-style:italic;
+		margin:5px 0;
+		text-transform:uppercase;
+		a{
+			color:#ffcfca;
+			&:hover{
+				color:$main_hover_text
+			}
+		}
+	}
+	.blog-desc{
+		margin-bottom:20px;
+	}
+	.blog-author{text-transform:uppercase}
+}
+/* ============================================ *
+	Codazon_Ellyana Instagram
+* ============================================ */
+.main-instagram-content{
+	.photo-item-link{
+		&:before{
+			position:absolute;
+			content:"";
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			background:rgba(0, 0, 0, 0.2);
+			z-index:1;
+			@include abs-scale(0);
+			@include abs-transition();
+			@include abs-opacity(0.5)
+		}
+		&:after{
+			@include abs-iconfont("\f16d", 28px);
+			top: calc((100% - 28px)/2);
+			left: calc((100% - 28px)/2);
+			color: #ffffff;
+			z-index: 2;
+			@include abs-scale(0);
+			position:absolute;
+		}
+		&:hover{
+			&:before,
+			&:after{
+				@include abs-scale(1);
+			}
+		}
+	}
+}
+/* ============================================ *
+		   Codazon_Ellyana Brand Slider
+* ============================================ */
+.cdz-brand-slider-wrap {
+	.cdz-banners-item{
+		border:0
+	}
+	.cdz-brand-slider{
+		.owl-theme.owl-carousel .owl-nav [class*='owl-']{
+			@include abs-style($btn_default_text, $btn_default_border, $btn_default_background);
+			width:35px;
+			height:35px;
+			left:0;
+			&:hover{
+				@include abs-style($btn_default_background, $btn_default_border, $btn_default_text);
+			}
+			&.owl-next{
+				right:0;
+				left:auto
+			}
+			&:before{
+				font-size: 25px;
+		    	line-height: 32px;
+			}
+		}
+		.cdz-banners-item{
+			background:transparent
+		}
+	}	
+}
+.owl-nav [class*='owl-'], 
+.owl-theme .owl-nav [class*=owl-]{
+	@include abs-style($btn_default_text, $btn_default_border, $btn_default_background);
+	width:35px;
+	height:35px;
+	left:0;
+	padding:0;
+	@include abs-borderradius(0);
+	@include abs-scale(0);
+	&:hover{
+		@include abs-style($btn_default_background, $btn_default_border, $btn_default_text);
+	}
+	&.owl-next{
+		right:0;
+		left:auto
+	}
+	&:before{
+		font-size: 25px;
+    	line-height: 32px;
+	}
+}
+.slideshow-content{
+	.owl-nav [class*='owl-'], 
+	owl-theme .owl-nav [class*=owl-]{
+		@include abs-scale(1);
+	}
+
+}
+.cdz-post-slider,
+.instagram-slider{
+	&:hover{
+		.owl-nav [class*='owl-'], 
+		owl-theme .owl-nav [class*=owl-]{
+			@include abs-scale(1);
+		}
+	}
+}
+
+/* ============================================ *
+ * Codazon_Footer_Ellyana
+ * ============================================ */
+ .page-footer{
+ 	&.cdz-footer-style-01{
+ 		.footer{ 		
+ 			font-weight:500;
+ 		}
+ 	}
+ 	.footer{ 		
+ 		.footer-bottom{background:$footer_background}
+ 		.item_tag li a{
+			background-color:$footer_background
+		}
+ 	} 	
+	.top-footer-wrapper{
+		padding: 0 0 10px;
+		.footer-top-ads {
+			color:#000000;
+			.ftop-ads-title {		
+				font-weight: 500;
+				text-transform: lowercase;
+				margin-bottom: 13px;
+				color:$footer_title_text
+			}			
+			.ftop-ads-small {
+				font-size: 85%;
+				color:#000000;
+			}
+		}
+	}	
+	footer.page-footer {
+		.footer.footer-content-top {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			.block-static-block.widget,
+			.block-cms-link.widget{
+				margin:0
+			}
+		}
+		.bottom-footer-wrapper{
+			//.abs-style(#ffffff, #282828, #282828);
+			.copyright{
+				font-weight:400;
+				font-size:12px;
+				margin: 7px 0;
+			}
+		}
+		.footer-box{
+			> p{
+				font-weight:400
+			}
+		}
+	}
+	
+	.ftop-ads-desc{
+		font-weight:300;
+		margin-bottom: 17px;
+	}
+	.block-subscribe{
+		.block-content{
+			width:35%; min-width:350px
+		}
+	}
+	.bottom-footer-wrapper{
+		background:$footer_bottom_background;
+		color:$footer_bottom_text;
+		padding:20px 0 10px
+	}
+	.footer-box .footer-social a:hover{
+		color:$footer_background;
+	}
+}
+
+/* ============================================ *
+ 	Codazon Ellyana Responsive
+ * ============================================ */
+ @media screen and (min-width:768px) and (max-width:1199px){
+ 	/*Header*/
+ 	.sticky-menu{
+ 		&:not(.active){
+ 			.cdz-header-menu-content{
+ 				.cdz-fix-left{
+ 					display: flex;
+    				align-items: center;
+ 				}
+ 			}
+ 			.cdz-content-megamenu{
+ 				flex-basis:70%
+ 			}
+ 			.search-wrapper{
+ 				flex-basis:30%;
+ 				.input-text{
+ 					border: 1px solid #000000;
+ 				}
+ 			}
+ 		}
+ 		&.active{
+ 			.cdz-bottom-logo-cart{
+ 				.container{
+ 					position:relative
+ 				}
+ 			} 		
+ 		}
+ 	}
+ 	/*Best seller*/
+ 	.cdz-best-seller-wrap{
+ 		.products-grid .product-item .product-item-info {
+ 			.cdz-product-bottom{
+	 			position: absolute;
+			    bottom: 10px;
+			    right: 10px;
+			    background: transparent !important;
+			    @include abs-scale(1);
+			    top: auto;
+			    left: auto;
+			    width: auto;
+			    height: auto;
+			    .cdz-buttons-container{margin-bottom:0}
+			    .product-name{display:none}
+			    .ratings{display:none}
+			    .cdz-buttons{display:none}
+			    .price-box{
+			    	background: #fafafa;
+			    	display: inline-block;
+	    			padding: 0 7px;
+	    			margin-bottom:0;
+	    			.old-price{margin:0}
+	    			.price{color:#000000; font-weight:400}
+			    }
+			}
+			&:hover{
+				.cdz-product-bottom{
+					.special-price{
+						.price{
+							color:#000000
+						}
+					}
+				}
+			}
+ 		}
+ 	}
+ 	/*Most popular*/
+ 	.product-style-09 .qs-button{
+ 		@include abs-opacity(1)
+ 	}
+ }
+ .cdz-mobile-nav{
+ 	.nav-tabs{
+ 		display: flex;
+ 		overflow: hidden;
+ 	}
+ 	.groupmenu-drop{overflow:hidden}
+ }
+ @media screen and (max-width:767px){
+ 	/*Title*/
+ 	.widget-static-block .cdz-block-title .b-title{
+ 		font-size:2.6rem;
+ 	}
+ 	/*Main contain*/
+ 	.product-item .old-price{
+ 		margin-left:0
+ 	}
+ 	.products-grid .product-item .product-item-info {
+ 		.product-name{
+ 			white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    text-transform:uppercase;
+		    font-weight:500;
+		    padding: 0 10px;
+ 		}
+ 		.cdz-buttons-inner,
+ 		.cdz-buttons { 		
+ 			.button.btn-cart{
+		 		height:30px;
+		 		line-height:30px
+		 	}
+	 	}
+	 	.product-quickview .qs-button{display:none}
+ 	}
+ 	/*New release*/
+ 	.cdz-new-trend-wrap {
+ 		.product-item-info{
+	 		&:hover {
+		 		.product-item-details{				
+					@include abs-transform(translateY(0))
+				}
+		 		.product-gallery{
+		 			display:none;
+		 		}
+		 	}
+		 	.cdz-buttons-container{
+		 		opacity:1 !important;
+		 		position:static;
+		 		margin-bottom:10px;
+		 	}
+		 	.product-item-details{
+		 		padding:10px 10px 0
+		 	}
+		 	.btn-cart{
+		 		width: calc(100% - 20px );
+		 	}
+		 	.product-quickview .qs-button{
+		 		opacity:1 !important;
+		 		@include abs-transform(translateY(-35px))
+		 	}
+		}
+		.product-items.flex-grid{
+			align-items: stretch;
+			.product-item{
+				display: flex;
+			    align-items: stretch;
+			    .product-item-info{
+			    	display: flex;
+    				flex-direction: column;
+    				.cdz-buttons-container{
+    					margin-top: auto;
+    				}
+			    }
+			}
+		}
+
+ 	}
+ 	/*Best Seller*/
+ 	.cdz-best-seller-wrap {
+ 		position:relative;
+ 		.cdz-block-title {
+		    display: inline-block;
+		    margin: 25px 0px 0px;
+		    float: left;
+		    .b-title {
+			    display: inline;
+			}
+		}
+		.cdz-block-content{
+			width: 100%;
+   			float: left;
+   			margin-top: 20px;
+   			position:relative
+		}
+		.mobile-toggle{
+			width: 100px;
+		    position: absolute;
+		    right: 10px;
+		    top: -55px;
+		    padding:5px;
+		    left: auto;
+		    border:1px solid;
+		    text-transform:uppercase;
+		    @include abs-style($btn_default_text, $btn_default_border, $btn_default_background);
+		    @include abs-transition();
+		    &:after{
+		    	@include abs-iconfont("\f107", 12px);
+		    	margin: 0 5px;
+		    }
+		    &.open{
+		    	@include abs-style($btn_default_background, $btn_default_border, $btn_default_text);
+		    	&:after{
+		    		@include abs-iconfont("\f106", 12px);
+		    		margin: 0 5px;
+		    	}
+		    }
+		}
+		.nav-tabs.abs-dropdown {
+		    position: absolute;
+		    right: 10px;
+    		left: auto;
+    		top: -20px;
+    		z-index:2;
+		    background:#ffffff;
+		    width: 200px;
+		    border:1px solid $main_border;
+		    margin:0;
+		    .item{
+		    	display:block;
+		    	a{
+			    	background:#ffffff;
+			    	text-align:left;
+			    	width:100%;
+			    	border:0;
+			    	border-bottom:1px solid $main_border;
+			    	color:#000000;
+			    }
+		    }
+		}		
+		.products-grid .product-item {
+			.product-item-info{
+				background:$main_product_background;
+				.cdz-product-bottom{
+					background:$main_product_background;
+				}
+				.product-name a{
+					color: $main_productname_text
+				}				
+				.cdz-buttons .button.btn-cart{
+					width:calc(100% - 20px );
+					font-size: 1.2rem;
+					text-transform:uppercase;
+					border-width:1px;
+					@include abs-style($btn_default_text, $btn_default_border, $btn_default_background);
+					&:before{
+						display:none;
+					}
+				}
+			}
+	 	}		
+ 	}
+ 	/*Most popular*/
+ 	.product-style-09 .product-info .product-item-description{display:none}
+ 	/*Blog*/
+ 	.cdz-wapper-blog-01 .cdz-blog-bottom {
+	    padding: 15px 10px;
+	}
+ 	/*Footer*/
+ 	.ftop-newsletter .block.block-subscribe .block-content{
+ 		min-width:300px;
+ 		margin:0 auto
+ 	}
+ }
+/* ============================================ *
+ 	Codazon Ellyana Product Page
+ * ============================================ */
+.col-main-containter {
+	.product-view {
+ 	}
+}
+
+/* ============================================ *
+ 	Codazon Ellyana Categories Page
+ * ============================================ */
+ .category-products{
+ 	.product-item-info{
+ 		.product-name {
+		    font-size: 1.2rem;
+		    text-transform: uppercase;
+		    font-weight: 400;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		}
+ 	}
+ 	.products-grid{
+	 	.product-item-info{
+	 		display: flex;
+	    	flex-direction: column;
+	    	background:$main_product_background;
+			position: relative;
+			border:1px solid transparent;
+			@include abs-boxshadow(none);
+	 		.cdz-hover-img{
+	 			//position:relative;
+	 		}
+	 		.cdz-product-top,
+	 		.product-image{
+	 			position:static;
+	 		}
+	 		.link-wishlist{
+	 			position: absolute;
+			    left: 15px;
+			    top: 15px;
+			    font-size:0;
+			    display:block;
+			    &:before{
+			    	@include abs-iconfont("\f08a", 18px);
+			    	width: 20px;
+			    }
+	 		}
+	 		.compare{
+	 			position: absolute;
+			    left: 15px;
+			    top: 45px;
+			    font-size:0;
+			    display:block;
+			    .link-compare{
+			    	&:before{
+				    	@include abs-iconfont2("\e6c2", 20px);
+				    	width: 20px;
+			    	}
+			    }			    
+	 		}
+	 		.product-gallery{
+				width: 60px;
+			    position: absolute;
+			    left: -50px;
+			    top: -1px;
+			    min-width: 43px;
+			    padding: 30px 5px 133px;
+			    border-right: 0;
+			    z-index: 11;	    
+			    border: 1px solid transparent;
+			    background:$main_product_background;	   
+			    visibility: hidden;
+			    height: calc(100% + 2px);
+			    @include abs-transition();
+			    @include opacity-extention(0);
+			    .img-slider{
+			    	.item {
+			    		width: 100% !important;
+		    			max-width: none !important;
+		    			margin:0;
+		    			padding:0;
+			    	}
+			    }
+			    .lSSlideOuter{overflow:visible}
+			    .lSAction > a {
+				    text-align: center;
+				    background: #ffffff;
+				    top: -30px;
+				    left: 40%;
+				    height: 25px;
+				    width: 35px;
+				    display: block;
+				    cursor: pointer;
+				    position: absolute;
+				    z-index: 99;
+				    @include opacity-extention(1);
+				    &:before{
+						@include abs-iconfont("\F106", 30px);
+					}
+					&.lSNext{
+						bottom: -25px;
+						top: auto;
+						&:before{
+							content:"\F107"
+						}
+					}
+				}
+			}
+			.product-item-details{
+		 		padding:15px 20px 20px;
+		 		@include abs-transition();
+		 		background:$main_product_background;
+		 		.qs-button{
+					position: absolute;
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				    padding: 0;
+				    font-weight: 600;
+				    font-size: 1.2rem;
+				    background: rgba(255, 255, 255, 0.62);			    
+				    border: 0;
+					color: $btn_productitem_text;
+					@include abs-transition();
+					@include opacity-extention(0);
+					&:before{
+						margin:0 5px;
+						font-size:12px;
+					}
+				}	
+				.btn-cart{
+					@include abs-opacity(0);
+					font-size: 1.2rem;
+				    vertical-align: top;
+				    width: 100%;
+				    border-width:1px;
+				    margin-bottom: 0;
+				    @include abs-transition();
+				    @include abs-style($btn_default_text, $btn_default_border, $btn_default_background);
+				    &:hover{
+				    	@include abs-style($btn_default_background, $btn_default_border, $btn_default_text);
+				    }
+				    &:before{
+				    	display:none;
+				    }
+				}					
+				.cdz-buttons{
+					height: auto;		   
+				    margin-bottom:0;
+				    background: transparent;
+				    @include opacity-extention(0);
+				    position: absolute;
+				    bottom: -20px;
+				    width: calc(100% - 40px);
+				}		
+		 	} 	
+			&:hover{
+				border-color:$main_border;
+				.product-gallery{
+					visibility: visible;
+			    	@include opacity-extention(1);
+			    	border-color:$main_border;
+			    	border-right-color:transparent
+				}
+				.qs-button{
+					@include opacity-extention(1);
+					@include abs-transform(translateY(-35px));
+					z-index:1;
+				}			
+				.product-item-details{
+					@include abs-transform(translateY(-35px));
+					.cdz-buttons{
+						transition-delay:0.2s;
+						opacity:1 !important;
+						.btn-cart{
+							@include abs-opacity(1);
+						}
+					}
+				}			
+			}
+	 	} 
+ 	}	
+ 	/*product list*/
+ 	.products-list{
+	 	:not(.hover-image-grid) .cdz-hover-img {
+		    width: 20%;
+		    float: left;
+		    margin-right: 8%;
+		    position: relative;
+		}
+		:not(.hover-image-grid){
+			.product-item-details{
+				width: 72%;
+				padding-left:20px;
+			}
+		}
+	}
+}
+/*Product List*/
+.products-list{
+	.products{margin:0;}
+	.cdz-product-top{
+		position:relative;
+	}
+	.product-gallery{
+		width: 60px;
+	    position: absolute;
+	    right: -60px;
+	    top: 0;
+	    min-width: 43px;
+	    border: 0 solid transparent;
+	    border-right: none;
+	    background: #fff;
+	    padding: 30px 0 135px;
+	    @include abs-transition();
+	    //@include abs-opacity(0);
+	    //visibility: hidden;
+	    .lSAction > a {
+		    text-align: center;
+		    background: #ffffff;
+		    top: -30px !important;
+		    left: 43%;
+		    height: 25px;
+		    width: 35px;
+		    display: block;
+		    cursor: pointer;
+		    position: absolute;
+		    z-index: 99;
+		    @include opacity-extention(1);
+		    color:#999999;
+		    &:before{
+				@include abs-iconfont("\F106", 30px);
+			}
+			&.lSNext{
+				bottom: -25px;
+				top: auto !important;
+				&:before{
+					content:"\F107"
+				}
+			}
+		}
+		.lSSlideOuter.vertical{overflow:visible}
+	}
+	.img-slider{
+		display: flex;
+		flex-direction: column;
+	}
+	.product-item-info{
+		padding:15px;
+		.link-wishlist{
+			position: absolute;
+	    left: 15px;
+	    top: 15px;
+	    font-size:0;
+	    display:block;
+	    &:before{
+	    	@include abs-iconfont("\f08a", 18px);
+	    	width: 20px;
+	    }
+		}
+		.compare{
+			position: absolute;
+	    left: 15px;
+	    top: 45px;
+	    font-size:0;
+	    display:block;
+	    &:before{
+	    	@include abs-iconfont2("\e6c2", 18px);
+	    	width: 20px;
+	    }
+		}
+		.product-image {
+			img{width:100%}
+		}
+		&:hover{
+			.product-gallery{
+				//@include abs-opacity(1);
+	    	//visibility: visible;
+			}
+		} 	
+		.product-item-details-bottom{
+			.qs-button{
+				width: 100%;
+			    border-width: 1px;
+			    font-size: 12px;
+			    margin-bottom:10px;
+			    @include abs-style($btn_default_text,$btn_default_border,$btn_default_background);
+			    &:before{
+			    	margin:0 5px;
+			    }
+			    &:hover{
+			    	@include abs-style($btn_default_background,$btn_default_border,$btn_default_text);
+			    }
+			}
+			.btn-cart{					
+				width: 100%;
+			    border-width: 1px;
+			    font-size: 12px;
+				font-weight:normal;	
+				@include abs-style($btn_default_text,$btn_default_border,$btn_default_background);	
+				&:hover{
+					@include abs-style($btn_default_background,$btn_default_border,$btn_default_text);
+				}
+				&:before{margin:0 5px}
+			}
+		}		
+	}	
+	:not(.hover-image-grid){
+		.product-item-details{
+			display: flex;
+			.product-item-details-top{
+				width: 70%;
+				padding-right: 15px;
+				.cdz-rtl &{
+					padding-right:0;
+					padding-left:15px;
+				}
+			}
+			.product-item-details-bottom{
+				display:flex;
+				flex-direction:column;
+				width: 30%;
+				.price-box{
+					order:1;
+					.price{
+						font-size: 18px;
+					}
+				}
+				.addto-hover-container{
+					order:2;
+				} 
+				.cdz-buttons{
+					order:3
+				}					
+			}
+		}
+	}		
+}
+.cdz-qs-view .royalSlider {
+ 	width:auto
+}
+@media screen and (min-width:768px) and (max-width:1199px){
+	.products-list .product-gallery{
+		display:none
+	}
+}
+@media screen and (max-width:767px){
+	.products-list .product-gallery{
+		display:none
+	}
+	.category-products .products-list {
+		:not(.hover-image-grid) {
+			.cdz-hover-img{
+				width: 45%;
+			    margin-right: 5%;
+			}
+			.product-item-details{
+				flex-direction: column;
+				width: 45%;
+				.product-item-details-top,
+				.product-item-details-bottom{
+					width:100%
+				}
+				.product-item-description{
+					display:none
+				}
+			}
+		}
+	}
+}
+/*RTL layout*/
+.cdz-rtl{
+	&.cms-index-index .main-container .col-main-containter {
+	    overflow: hidden;
+	}
+	/*Header*/
+	.header {
+		.form-language .cdz-dropdown-content li a span{
+			float:right
+		}
+		.sticky-menu.active .search-wrapper .block-search{
+			right:auto;
+			left:75px;
+			&:after{
+				right:auto;
+				left:-7px;
+			}
+		}
+	}
+	/*Main content*/
+	.cdz-new-trend-wrap{
+		.cdz-product-lbs{
+			left:15px;
+			right:auto
+		}
+		.cdz-product-wishlist {
+		    right:15px;
+		    left:auto
+		}
+		.cdz-product-top .product-gallery{
+			left:auto;
+			right:-50px;
+			border-left:0;
+			border-right:1px solid transparent
+		}
+		.product-item-info{
+			&:hover{
+				.product-gallery{
+					border-right-color:$main_border
+				}
+			}
+		}
+	}
+	.wrapper-ads06 .items li{
+		border-right:0;
+		border-left:1px solid $main_border;
+		&:last-child{
+			border-left:0;
+		}
+	}
+	.cdz-best-seller-wrap-hover{
+		.codazon-filter .products-grid .item{
+			float:right
+		}
+	}
+	.product-style-09 .product-info {
+		.cdz-buttons a{
+			padding-left: 17px;
+			padding-right:0;
+			float:right;
+			&:before{
+				right:auto;
+				left:-3px;
+			}
+		}
+		.btn-cart{
+			float:right
+		}
+	}
+	/*Categories*/
+	.category-products .products-list :not(.hover-image-grid){
+		.cdz-hover-img{
+			float:right;
+			margin-right:0;
+			margin-left:8%;
+			.product-gallery{
+				right:auto;
+				left:-60px;
+			}
+		}
+		.product-item-details{
+			padding-left:0;
+			padding-right:20px;
+		}
+	}
+	.lSSlideOuter.vertical .lSAction>.lSPrev{top:-30px;}
+	&.catalog-category-view {
+		.col1-layout .page-title h1{
+			float: right;
+		}
+		#cdz-filter-bar .block-title{
+			text-align:left
+		}
+	}
+	@media screen and (max-width:767px){
+		.cdz-best-seller-wrap {
+			.cdz-block-title{
+				float:right
+			}
+			.mobile-toggle{right:auto; left:0}
+		}
+		.product-style-09 .cdz-block-title{
+			text-align:right
+		}
+	}
+}
+.grid,
+.list {
+	&.active{
+		color:$main_hover_text
+	}
+}

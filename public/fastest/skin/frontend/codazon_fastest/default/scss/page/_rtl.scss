@@ -1,0 +1,146 @@
+.cdz-rtl{
+	/*custom rtl default*/
+	.cdz-col-left{float:right;}
+	.cdz-col-right{float:left;}
+	
+	/*codazon menu*/
+	.cdz-main-menu{
+		.groupmenu-drop{
+			//right: -9999px;
+			//left: auto;
+		}
+	}
+	.block:not(.block-static-block) .block-content{
+		text-align:right;
+		clear:right;
+	}
+	.logo{
+		float:right;
+	}
+	.configurable-swatch-list li{float:right;}
+}
+/*RTL Layout*/
+.cdz-rtl{
+	.page-footer .cdz-footer-bottom-payment{
+		float: left;
+	}
+	.rsUni .rsThumbsVer {
+	  left: auto;
+	  right: 0;
+	}
+	.rsUni .rsFullscreenBtn {
+	  left: 0;
+	  right: auto;
+	}
+	.products-grid .product-item{
+		float: right;
+	}
+	.block-layered-nav .block-content dl dd li:before{
+		content: "\f104";
+	}
+	.product-view .product-button-top{
+		float: right;
+	}
+	.cdz-mobile-header-menu .cdz-navbar-toggle{
+		left: auto;
+		right: 0;
+		margin: 0 0 0 30px;
+	}
+	.cdz-mobile-header-menu .cdz-top-cart a.cart-icon{
+		right: auto;
+		left: 0;
+		
+	}
+	.cdz-mobile-header-menu .cdz-menu-responsive .icon-bar{
+		right: 0;
+	}
+	&.canvas-slid{
+		left: auto !important;
+		right: 280px !important;
+	}
+	&.canvas-slid .offcanvas.in {
+		right: auto !important;
+		left: 95px !important;
+	}
+	.cdz-mobile-header-menu .nav-tabs li{
+		float: right;
+	}
+	.my-account .box-content h3, 
+	.my-account .box-content h4, 
+	.my-account .box-title h3, 
+	.my-account .box-title h4{
+		float: right;
+		margin: 8px 0px 8px 20px;
+	}
+	.breadcrumbs ul li span:before{
+		content:'\f177';
+	}
+	.mini-products-list .product-details {
+		margin-left: 0;
+		margin-right: 60px;
+	}
+	.mini-products-list .product-image{
+		min-width: 50px;
+	}
+	.block-wishlist .price-box {
+		float: right;
+	}
+	.block-wishlist .link-cart{
+		float: right;
+	}
+	.block-content li.item {
+		margin: 0 9px 10px 0;
+	}
+	.category-products .products-list > li .cdz-product-left{
+		float: right;
+	}
+	.products-list .cdz-hover-section{
+		float: right;
+	}
+	.products-list .product-shop{
+		float: right;
+		padding-right: 20px;
+		padding-left: 0;
+	}
+}
+.cdz-rtl{
+	&.customer-account-index .col-main, 
+	&.customer-account-edit .col-main, 
+	&.wishlist-index-index .col-main, 
+	&.customer-address-form .col-main, 
+	&.sales-order-history .col-main, 
+	&.sales-billing-agreement-index .col-main, 
+	&.sales-recurring-profile-index .col-main, 
+	&.review-customer-index .col-main, 
+	&.oauth-customer-token-index .col-main, 
+	&.newsletter-manage-index .col-main, 
+	&.downloadable-customer-products .col-main, 
+	&.customer-address-index .col-main, 
+	&.sales-order-view .col-main, 
+	&.tag-customer-index .col-main, 
+	&.sales-order-shipment .col-main, 
+	&.sales-order-invoice .col-main{
+			left: auto;
+			right: 20%;
+			float: right;
+		}
+	&.customer-account-index .col-left.sidebar, 
+	&.customer-account-edit .col-left.sidebar, 
+	&.wishlist-index-index .col-left.sidebar, 
+	&.customer-address-form .col-left.sidebar, 
+	&.sales-order-history .col-left.sidebar, 
+	&.sales-billing-agreement-index .col-left.sidebar, 
+	&.sales-recurring-profile-index .col-left.sidebar, 
+	&.review-customer-index .col-left.sidebar, 
+	&.oauth-customer-token-index .col-left.sidebar, 
+	&.newsletter-manage-index .col-left.sidebar, 
+	&.downloadable-customer-products .col-left.sidebar, 
+	&.customer-address-index .col-left.sidebar, 
+	&.sales-order-view .col-left.sidebar, 
+	&.tag-customer-index .col-left.sidebar, 
+	&.sales-order-shipment .col-left.sidebar, 
+	&.sales-order-invoice .col-left.sidebar{
+		right: 0;
+		left: auto;
+	}
+}

@@ -1,0 +1,16 @@
+$space-base : 60px;
+@import "../mixins/theme-custom";
+@import "../variable/baby-theme.scss";
+
+
+/*Baby Homepage*/
+@import "baby_content";
+
+/*Baby Header*/
+@import "../header/header-08.scss";
+
+/*Baby Footer*/
+@import "../footer/footer-05.scss";
+
+/*Color Important*/
+@import "../global";

@@ -1,0 +1,15 @@
+@import "../mixins/theme-custom";
+@import "../variable/ellyana-theme.scss";
+
+
+/*Ellyana Homepage*/
+@import "_ellyana_content";
+
+/*Ellyana Header*/
+//@import "../header/header-02.scss";
+
+/*Ellyana Footer*/
+//@import "../footer/footer-02.scss";
+
+/*Color Important*/
+@import "../global";

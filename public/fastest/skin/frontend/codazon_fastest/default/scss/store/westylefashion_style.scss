@@ -1,0 +1,16 @@
+$space-base : 60px;
+@import "../mixins/theme-custom";
+@import "../variable/westylefashion-theme.scss";
+
+
+/*Sport Homepage*/
+@import "westylefashion_content";
+
+/*Sport Header*/
+@import "../header/header-07.scss";
+
+/*Sport Footer*/
+@import "../footer/footer-05.scss";
+
+/*Color Important*/
+@import "../global";

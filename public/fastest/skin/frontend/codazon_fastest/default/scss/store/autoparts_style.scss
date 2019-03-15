@@ -1,0 +1,16 @@
+$space-base : 60px;
+@import "../mixins/theme-custom";
+@import "../variable/autoparts-theme.scss";
+
+
+/*Sport Homepage*/
+@import "autoparts_content";
+
+/*Sport Header*/
+@import "../header/header-10.scss";
+
+/*Sport Footer*/
+@import "../footer/footer-07.scss";
+
+/*Color Important*/
+@import "../global";
