@@ -1,23 +1,15 @@
-# webpack_react
+#React CDN
+https://optimistic-leavitt-6cb8eb.netlify.com/styles/default/codazon/bootstrap/css/bootstrap.min.css
 
-Vendor spliting
+https://optimistic-leavitt-6cb8eb.netlify.com/styles/default/codazon/bootstrap/css/bootstrap-theme.min.css
 
-#instalation
+https://optimistic-leavitt-6cb8eb.netlify.com/skin/frontend/codazon_fastest/default/css/fontawesome/font-awesome.min.css
 
--- git clone this project, then
+https://optimistic-leavitt-6cb8eb.netlify.com/fastest/skin/frontend/codazon_fastest/default/codazon/bootstrap/css/bootstrap-theme.min.css
 
-#
+https://optimistic-leavitt-6cb8eb.netlify.com/fastest/skin/frontend/codazon_fastest/default/css/styles.css
 
--- cd project
+https://optimistic-leavitt-6cb8eb.netlify.com/fastest/skin/frontend/codazon_fastest/default/css/responsive.css
 
-#
+https://optimistic-leavitt-6cb8eb.netlify.com/fastest/skin/frontend/codazon_fastest/baby/css/style_baby.css
 
--- npm run dev to live editing
-
-#
-
--- npm install
-
-#
-
--- npm run build
